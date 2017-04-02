@@ -3,7 +3,7 @@
 Plugin Name: TWD TinyMCE Example
 Plugin URI: https://www.thewebsitedev.com/
 Description: An example plugin to load dynamic content in tinymce popup.
-Version: 0.1
+Version: 0.2
 Author: Gautam Thapar
 Author URI: https://www.thewebsitedev.com/
 License: GPLv2 or later
@@ -133,7 +133,7 @@ if( !class_exists( 'TWDTinymceExample' ) ) {
 		public function list_ajax() {
 			// check for nonce
 			check_ajax_referer( 'twd-nonce', 'security' );
-			$posts = $this->posts( 'book' );
+			$posts = $this->posts( 'book' ); // change 'book' to 'post' if you need posts list
 			return $posts;
 		}
  		
