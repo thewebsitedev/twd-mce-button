@@ -3,7 +3,7 @@
 Plugin Name: TWD TinyMCE Example
 Plugin URI: https://www.thewebsitedev.com/
 Description: An example plugin to load dynamic content in tinymce popup.
-Version: 0.2
+Version: 0.3
 Author: Gautam Thapar
 Author URI: https://www.thewebsitedev.com/
 License: GPLv2 or later
@@ -16,7 +16,7 @@ if ( !defined( 'ABSPATH' ) ){
 	exit;
 }
 
-define( 'TWD__VERSION', '0.1' );
+define( 'TWD__VERSION', '0.3' );
 define( 'TWD__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 /**
@@ -163,8 +163,8 @@ if( !class_exists( 'TWDTinymceExample' ) ) {
 						  		console.log('error');
 					  		} else {
 					  			if (typeof(tinyMCE) != 'undefined') {
-					  				if (tinyMCE.activeEditor != null) {
-										tinyMCE.activeEditor.settings.cptPostsList = response;
+					  				if (tinyMCE.DOM != null) {
+										tinyMCE.DOM.cptPostsList = response;
 									}
 								}
 					  		}
