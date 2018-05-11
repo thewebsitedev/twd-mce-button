@@ -17,7 +17,7 @@
 							type: 'listbox',
 							name: 'listboxName',
 							label: 'TWD CPT Posts',
-							'values': editor.settings.cptPostsList
+							'values': tinyMCE.DOM.cptPostsList
 						}
 					],
 					onsubmit: function( e ) {
